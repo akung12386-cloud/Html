@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APK CEK BANNED</title>
+  <link rel="shortcut icon" href="./Tengkorak.jpg" type="immage/x icon">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background:url('/Tengkorak.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+      font-size: 17px;
+    }
+
+    select, input[type="text"] {
+      text-align: center;
+      width: 100%;
+      padding: 12px;
+      margin-top: 16px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      border: none;
+      border-bottom: 1px solid #555;
+      background: transparent;
+      outline: none;
+    }
+
+    .phone-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phone-input .code {
+      width: 60px;
+      font-size: 16px;
+      border: none;
+      border-bottom: 1px solid #555;
+      background: transparant;
+    }
+
+    .button {
+      width: 100%;
+      padding: 14px;
+      background-color: #111;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    .button:hover {
+      background-color: #333;
+    }
+    
+   .location.href='ALL MT {
+     text-align: center;
+   }
+  </style>
+
+</head>
+<body>
+<audio controls loop
+ <source src="DJ.mp3" type="audio/mp3">
+</audio>
+
+  <div class="container">
+    <h2>Verifikasi nomor Anda</h2>
+    <p>Masukan nomor yg ingin di cek banned.</p>
+
+    <label for="country">Negara</label>
+    <select id="country" onchange="updateCode()">
+      <option value="+98" selected>Iran</option>
+      <option value="+62">Indonesia</option>
+      <option value="+60">Malaysia</option>
+      <option value="+91">India</option>
+      <option value="+1">USA</option>
+    </select>
+
+    <div class="phone-input">
+      <input type="text" id="code" class="code" value="+98" disabled>
+      <input type="text" id="phone" placeholder="Phone number">
+    </div>
+
+    <button class="button" onclick="submitPhone()">Verivikasi</button>
+  </div>
+  <button onclick="location.href='ALL MT'">ALL MT/TEXT UNBANNED</button>
+
+  <script>
+    function updateCode() {
+      const select = document.getElementById("country");
+      const codeInput = document.getElementById("code");
+      codeInput.value = select.value;
+    }
+
+    function submitPhone() {
+      const code = document.getElementById("code").value;
+      const phone = document.getElementById("phone").value.trim();
+
+      if (phone === "") {
+        alert("Nomor tidak Ada");
+        return;
+      }
+
+      alert(`Nomor sudah Terbanned: ${code} ${phone}`);
+      
+    }
+  </script>
+
+</body>
+</html>
